@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[140rem] mx-auto p-[1.5rem];
+}
+
+@layer base{
+    html{
+        font-family:"gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+}
+
+@layer components{
+    .header{
+    @apply bg-[#404eed];
+    }
+    .header__wrapper{
+        @apply flex items-center justify-between lg:justify-center;
+    }
+    .header__nav{
+        @apply hidden lg:flex
+    }
+    .header__nav ul{
+        @apply flex ml-[15rem] gap-[2rem];
+    }
+    .header__nav ul li{
+        @apply mr-[2rem];
+    }
+    .header__nav ul li a{
+        @apply text-light font-[600] hover:underline;
+    }
+    .header__actions{
+        @apply block bg-light fixed top-0 w-[50%] right-[-100rem] max-h-[0vh] rounded-md overflow-hidden ease-in duration-[.5s] lg:hidden;
+    }
+    .header__logo{
+        @apply border-b-[1px] pt-[4rem] pb-[.7rem] lg:hidden;
+    }
+    .header__logo img{
+        @apply px-[1.5rem] py-[1rem];
+    }
+    .header__actions ul{
+        @apply block lg:hidden my-[1rem] pb-[9rem];
+    }
+    .header__actions ul li{
+        @apply px-[1.5rem] text-[.9rem] py-[.5rem] gap-[2rem] items-center hover:underline; 
+    }
+    .header__action ul li:first-child a{
+        @apply text-primary;
+    }
+    .header__actions ul li a i{
+        @apply text-[1rem] ml-[1rem]; 
+    }
+    .header__actions.open{
+        @apply right-[-1rem] max-h-[100vh] ease-in duration-[.5s];
+    }
+    .header__download{
+        @apply mx-[1.5rem] my-[3rem];
+    }
+    .header__download a{
+        @apply inline-block px-[1rem] py-[.5rem] bg-primary w-full rounded-full text-center text-light font-semibold transition-all duration-[.5s] hover:bg-[hsl(235,86.1%,71.8%)] lg:hidden;
+    } 
+    .header__open{
+        @apply mx-[1.5rem] ml-[15rem] my-[3rem];
+    }
+    .header__open a{
+        @apply inline-block px-[1rem] py-[.5rem] bg-light w-full rounded-full text-center text-dark font-semibold hover:text-primary shadow-[0_8px_15px_rgba(0,0,0,.2)] transition-all duration-[.5s];
+    } 
+    .header__download a i{
+        @apply text-light;
+    }
+    .toggle__menu{
+        @apply px-[.8rem] py-[1rem] lg:hidden;
+    }
+    .toggle__menu span{
+        @apply w-[1.5rem] h-[.15rem] bg-light block rounded-full duration-[.5s] ease-in ;
+    }
+    .toggle__menu span:nth-child(2){
+        @apply my-[.2rem];
+    }
+    .toggle__menu.open span:first-child{
+        @apply translate-x-0 translate-y-[6px] bg-dark duration-[.5s] rotate-[225deg] ease-in;
+    }
+    .toggle__menu.open span:last-child{
+        @apply translate-x-0 translate-y-[-5px] bg-dark duration-[.5s] rotate-[-225deg] ease-in;
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0 duration-[.5s] ease-in;
+    }
+}
+
+@layer components{
+    .banner{
+        @apply bg-hmBG min-h-[40rem] bg-cover bg-no-repeat lg:min-h-[45rem]
+    }
+
+    .banner__text{
+        @apply text-light lg:text-center lg:mt-[3rem]
+    }
+
+    .banner__text h2{
+        @apply text-[2rem] font-[900] lg:text-[4rem]
+    }
+
+    .banner__text p{
+        @apply my-[1rem] lg:text-[1.5rem] lg:px-[15rem]
+    }
+
+    .banner__btn{
+        @apply mt-[2rem]
+    }
+
+    .banner__btn ul{
+        @apply lg:flex lg:items-center lg:justify-center 
+    }
+
+    .banner__btn ul li{
+        @apply mb-[1.5rem] lg:mr-[1.5rem]
+    }
+
+    .banner__btn ul li a{
+        @apply flex items-center w-fit px-[2rem] py-[1rem] rounded-full
+    }
+
+    .banner__btn ul li:first-child a{
+        @apply bg-light
+    }
+
+    .banner__btn ul li:last-child a{
+        @apply bg-dark text-light
+    }
+
+    .banner__btn img{
+        @apply mr-[.5rem]
+    }
+}
